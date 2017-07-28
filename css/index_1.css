@@ -1,0 +1,219 @@
+/*1、通用 CSS ：大部分元素具备的样式*/
+body{
+    font:16px "microsoft yahei",Arial,Helvetica,sans-serif;
+    color:#383541;
+    margin:0;
+    background-color:#f1f1f1;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd{
+    margin:0;
+    padding:0;
+    border:none;
+    list-style:none;
+}
+a{
+    color:#07111b;
+    /*文本修饰(线条)*/
+    text-decoration:none;
+}
+a:hover{
+    color:#ff0700;
+    /*text-decoration:underline;*/
+}
+.lf{float:left;}
+.rt{float:right;}
+/*清除浮动*/
+/*.clear{clear:both;}*/
+.clear:after{
+    content:' ';
+    display:table;
+    clear: both;
+}
+/*顶部header*/
+#header{
+    background-color:#fff;
+}
+.header_nav{
+    width:1002px;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-right: 12px;
+}
+.header_nav>a{
+    margin-top:7px ;
+    width: 270px;
+    height: 35px;
+    background: url("../images/logo/logo_nav.png") no-repeat;
+}
+.header_nav>ul>li{
+    float: left;
+    margin-left: 12px;
+    line-height: 50px;
+    font-size: 14px;
+}
+/*中部，logo*/
+.container{
+    width: 100%;
+    /*height: 1050px;*/
+    background: url("../images/body.jpg") no-repeat 50% 0;
+    position: relative;
+}
+.main{
+    width: 1000px;
+    /*height: 1050px;*/
+    margin: 0 auto;
+    position: relative;
+    background: url("../images/main.jpg") no-repeat;
+}
+.main_top{
+    height: 522px;
+    position: relative;
+}
+.main_top_logo{
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+.main_top p{
+    font-size: 12px;
+    /*color: #0b8e89;*/
+    position: absolute;
+    display: inline-block;
+    right: 147px;
+    bottom: 7px;
+}
+/*中部*/
+.main_bottom{
+    width: 710px;
+    margin: 0 auto;
+    background: #fff;
+}
+.main_bottom>ul>li{
+    float: left;
+}
+.main_bottom>ul>li>a{
+    display: inline-block;
+    width: 128px;
+    height: 83px;
+    background: url("../images/logo/main_log.png") no-repeat
+}
+.main_bottom>ul>li>a.zhzhuce{
+    background-position: 0 0;
+}
+.main_bottom>ul>li>a.yxxiazai{
+    background-position: -128px 0;
+}
+.main_bottom>ul>li>a.xszhinan{
+    background-position: -256px 0;
+}
+.main_bottom>ul>li>a.hdzhongxin{
+    background-position: -384px 0;
+}
+.main_bottom>ul>li>a.jrguangwang{
+    position: relative;
+    width: 198px;
+    background:url("../images/logo/main_log2.jpg") no-repeat 0px 0px;
+}
+.main_bottom>ul>li>a.jrguangwang>i{
+    width: 18px;
+    height: 28px;
+    display: inline-block;
+    position: absolute;
+    background: url("../images/logo/icon_go.png") no-repeat;
+    top: -6px;
+    right: -8px;
+}
+.main_bottom>ul>li>a.zhzhuce:hover{
+    background-position: 0 -83px;
+}
+.main_bottom>ul>li>a.yxxiazai:hover{
+    background-position: -128px -83px;
+}
+.main_bottom>ul>li>a.xszhinan:hover{
+    background-position: -256px -83px;
+}
+.main_bottom>ul>li>a.hdzhongxin:hover{
+    background-position: -384px -83px;
+}
+.main_bottom>ul>li>a.jrguangwang:hover{
+    background-position: 0 -83px;
+}
+.main_bottom div.video{
+    width: 690px;
+    height: 380px;
+    padding-bottom: 10px;
+    margin: 20px auto;
+    margin-bottom: 80px;
+    position: relative;
+}
+#btn-play, #btn-closevideo {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+}
+#btn-play:hover{
+    opacity:0.8;
+}
+#btn-closevideo {
+    width: 30px;
+    height: 30px;
+    background: url("../images/btnVideoClose.png") no-repeat;
+    top: 12px;
+    right: 12px;
+    display: none;
+}
+#btn-play {
+    width: 84px;
+    height: 84px;
+    background: url("../images/videoIco.png") no-repeat;
+    top: 145px;
+    left: 300px;
+}
+/*底部*/
+#footer,.footer-box{
+    background: url("../images/bg_w.jpg") repeat-x;
+    font-size: 12px;
+    color: #888;
+}
+#footer a{
+    display: inline-block;
+}
+
+.footer-box{
+    width: 1130px;
+    height: 132px;
+    margin: 0 auto;
+}
+.footer-one{
+    margin-top:32px ;
+    margin-left:30px ;
+    margin-right:10px ;
+}
+.footer-one-1{
+    margin-right: 30px;
+}
+.footer-two p{
+    height: 19px;
+}
+.footer-two a{
+    font-size: 12px;
+    color: #888;
+}
+.footer-two {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    background: url("../images/slice_w.jpg") no-repeat left top;
+
+}
+.footer-two a:hover {
+    text-decoration:underline;
+}
+.footer-tree{
+    margin-top: 21px;
+}
+.footer-tree a{
+    margin-left: 5px;
+}

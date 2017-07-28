@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index_1.css"/>
+</head>
+<body>
+<!--1.顶部导航部分-->
+<div id="header">
+    <div class="header_nav clear">
+        <a href="#" class="lf"></a>
+        <ul class="rt">
+            <li><a href="#">注册</a></li>
+            <li>|</li>
+            <li><a href="#">充值</a></li>
+            <li>|</li>
+            <li><a href="#">彩虹客服</a></li>
+        </ul>
+    </div>
+</div>
+<div id="section" class="container">
+     <!-- 中部-->
+    <div class="main">
+        <div class="main_top">
+            <a href="#" class="main_top_logo">
+                <img src="images/logo/logo_main.png" alt=""/>
+            </a>
+           <p>适龄提示：游戏适合12岁以上用户</p>
+        </div>
+        <div class="main_bottom">
+           <ul class="clear">
+               <li><a href="#" class="zhzhuce"></a></li>
+               <li><a href="#" class="yxxiazai"></a></li>
+               <li><a href="#" class="xszhinan"></a></li>
+               <li><a href="#" class="hdzhongxin"></a></li>
+               <li><a href="index_2.html" class="jrguangwang"><i></i></a></li>
+           </ul>
+            <div class="video">
+              <a id="btn-closevideo" title="关闭"></a>
+              <a id="btn-play" title="点击播放视频"></a>
+              <div id="video-con">
+                <img src="http://fu5.sdo.com/10036/201705/14956393894317.jpg" width="690" height="380" alt="">
+                  <!--<object> 标签用于包含对象，比如图像、音频、视频、Java applets、ActiveX、PDF 以及 Flash。-->
+               <!--<object id="video_player" type="application/x-shockwave-flash" data="http://player.ku6.com/refer/taJFdYTE8uh3TrXAw73yRg../v.swf&amp;adss=0&amp;bv=0&amp;pv=0&amp;auto=1&amp;rate=799&amp;fu=1" width="690" height="380">-->
+                  <!--<param name="quality" value="high">-->
+                  <!--<param name="allowScriptAccess" value="always">-->
+                  <!--<param name="allowFullScreen" value="true">-->
+                  <!--<param name="wMode" value="opaque">-->
+                  <!--<param name="swLiveConnect" value="true">-->
+                <!--</object>-->
+              </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- 底部-->
+<div id="footer">
+    <div class="footer-box clear">
+        <div class="footer-one lf">
+            <a href="#" class="footer-one-1"><img src="images/SDG_logo_w.jpg" alt=""/></a>
+            <a href="#"><img src="images/hezuo2.png" alt=""/></a>
+        </div>
+        <div class="footer-two lf">
+            <p><span>新出审字[2010]104号	文网进字[2009]011号</span></p>
+            <p class="lianjie"><a href="#">沪网文（2014）0749-179号</a><a href="#">ICP：沪B2-20100008</a><a href="#">新出网证（沪）字026号</a></p>
+            <p><span>上海数龙科技有限公司	版权所有</span></p>
+            <p><span>盛大游戏®商标是上海盛大网络发展有限公司拥有且授权给上海数龙科技有限公司使用的注册商标。</span></p>
+            <p><span>上海数龙科技有限公司对其运营行为独立承担全部责任。</span></p>
+        </div>
+        <div class="footer-tree lf">
+            <div class="footer-tree-a">
+                <a href="#"><img src="images/whjy.png" alt=""/></a>
+                <a href="#"><img src="images/plc_1_w.jpg" alt=""/></a>
+                <a href="#"><img src="images/shgs2.gif" alt=""/></a>
+                <a href="#"><img src="images/img_cp_jubao_w.png" alt=""/></a>
+            </div>
+            <div class="footer-tree-b">
+                <a href="#"><img src="images/report.png" alt=""/></a>
+                <a href="#"><img src="images/jzjh.png" alt=""/></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<!--video-->
+<script type="text/javascript">
+  $(function(){
+    // video
+    var vcon = $('#video-con').html();
+    //为#btn-play绑定单击事件
+    $('#btn-play').click(function(){
+      var _flv="http://player.ku6.com/refer/taJFdYTE8uh3TrXAw73yRg../v.swf";
+      var _width='690';
+      var _height='380';
+      var video_html='<object id="video_player" type="application/x-shockwave-flash" data="'+_flv+'&adss=0&bv=0&pv=0&auto=1&rate=799&fu=1" width="'+_width+'" height="'+_height+'">';
+      if(isThisOs('ie6,ie7,ie8')){
+      video_html +='<param name="movie" value="'+_flv+'&adss=0&bv=0&pv=0&auto=1&rate=799&fu=1">';
+      }
+      video_html +='<param name="quality" value="high">';
+      video_html +='<param name="allowScriptAccess" value="always">';
+      video_html +='<param name="allowFullScreen" value="true">';
+      video_html +='<param name="wMode" value="opaque">';
+      video_html +='<param name="swLiveConnect" value="true">';
+      video_html +='</object>';
+      //保存在object
+      $('#video-con').html(video_html);
+      $(this).hide();
+      $('#btn-closevideo').show();
+      });
+    $('#btn-closevideo').click(function(){
+      $('#video-con').html(vcon);
+      $('#btn-play').show();
+      $('#btn-closevideo').hide();
+    });
+  //get brower
+    function getOs(){
+      var OsObject = "";
+      if( navigator.userAgent.indexOf("MSIE 6.0")>0) {
+        OsObject = "ie6";
+      }else if( navigator.userAgent.indexOf("MSIE 7.0")>0) {
+        OsObject = "ie7";
+      }else if( navigator.userAgent.indexOf("MSIE 8.0")>0) {
+        OsObject = "ie8";
+      }else if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){
+        OsObject = "Firefox";
+      }else if(isChrome=navigator.userAgent.indexOf("Chrome")>0){
+        OsObject = "Chrome";
+      }
+      else if(isSafari=navigator.userAgent.indexOf("Safari")>0) {
+        OsObject = "Safari";
+      }else if(isCamino=navigator.userAgent.indexOf("Camino")>0){
+        OsObject = "Camino";
+      }else if(isMozilla=navigator.userAgent.indexOf("Gecko/")>0){
+        OsObject = "Gecko";
+      }
+      return OsObject;
+    }
+  // brower ver
+  function isThisOs(os){
+    var thisOs = getOs();
+    var hasThisOs = os.indexOf(thisOs);
+    return hasThisOs != -1;
+  }
+
+  });
+</script>
+</body>
+</html>
